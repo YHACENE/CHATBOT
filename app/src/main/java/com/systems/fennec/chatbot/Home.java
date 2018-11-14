@@ -91,7 +91,7 @@ public class Home extends AppCompatActivity
             fragment = new Dashboard();
         } else if (id == R.id.nav_slideshow)
         {
-
+            fragment = new VideoCapture();
         } else if (id == R.id.nav_manage)
         {
 
