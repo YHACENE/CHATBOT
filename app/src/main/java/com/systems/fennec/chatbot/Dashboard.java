@@ -35,17 +35,8 @@ public class Dashboard extends Fragment
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.activity_dashboard, null);
-
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
-    {
-        super.onViewCreated(view, savedInstanceState);
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        // Commande
+        View rootView = inflater.inflate(R.layout.activity_dashboard, null);
+        btnForward = rootView.findViewById(R.id.directionUp);
         btnForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -53,15 +44,16 @@ public class Dashboard extends Fragment
                 Toast.makeText(getContext(), "Avancer", Toast.LENGTH_LONG).show();
             }
         });
+        return rootView;
+    }
 
-        btnBackward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
 
-            }
-        });
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+    {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         Toast.makeText(getContext(), "Dashboard", Toast.LENGTH_LONG).show();
     }

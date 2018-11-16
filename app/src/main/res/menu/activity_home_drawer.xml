@@ -4,22 +4,23 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_streaming"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Streaming" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Dashboard" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="State" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_setting"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Setting" />
     </group>
 
     <item android:title="Communicate">
