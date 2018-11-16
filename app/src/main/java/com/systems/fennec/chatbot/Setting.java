@@ -92,14 +92,4 @@ public class Setting extends Fragment
 
 
 }
-/*
-Bonjour Mme. Elodie FENTZEL;
 
-   Je suis Hacene YOUNSI, étudiant en informatique à l'université de Paris 8 Vincennes Saint-Denis, je m'excuse pour ma réponse tardive à votre proposition, en effet j'étais en cours intensifs sur les outils pour développeur(Git, Makefile, GDB, ...) et Sécurité des systèmes Embarqués(Chiffrement, attaques, ...).
-
-   En effet, votre proposition m'interesse vivement, néanmoins pour l'instant je suis à la recherche d'un stage qui peut se dérouler en rythme d'alternance. Les différentes expériences professionnelles et académiques mon permettent d'acquérir une maitrisesur les systèmes RTOS Linux, programmation embarquée, ... etc.
-
-   Vous trouverez mon CV en PJ, Pour tout renseigment complémentaire sur mon profil, n'hésitez pas à me contacter.
-
-Bien à vous,
-* */
