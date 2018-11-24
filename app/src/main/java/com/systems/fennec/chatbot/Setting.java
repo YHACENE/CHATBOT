@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -54,7 +55,7 @@ public class Setting extends Fragment
         }
 
         adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, arrayList);
-        listView.setAdapter(adapter);
+        listView.setAdapter((ListAdapter) adapter);
         return rootView;
     }
 
@@ -66,28 +67,38 @@ public class Setting extends Fragment
         }
     };
 
+
+
     private void scanWifi()
     {
         arrayList.clear();
+        BroadcastReceiver wifiRegister = new BroadcastReceiver()
+        {
+            @Override
+            public void onReceive(Context context, Intent intent)
+            {
+                results = wifiManager.getScanResults();
+                getActivity().unregisterReceiver(this);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                    }
+                });
+                for (ScanResult scanResult : results)
+                {
+                    arrayList.add(scanResult.SSID);
+                    adapter.notify();
+                }
+            }
+        };
+
         getActivity().registerReceiver(wifiRegister, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         wifiManager.startScan();
         Toast.makeText(getContext(), "SCANNING ... WiFi", Toast.LENGTH_LONG).show();
     }
 
-    BroadcastReceiver wifiRegister = new BroadcastReceiver()
-    {
-        @Override
-        public void onReceive(Context context, Intent intent)
-        {
-            results = wifiManager.getScanResults();
-            getActivity().unregisterReceiver(this);
-            for (ScanResult scanResult : results)
-            {
-                arrayList.add(scanResult.SSID);
-                //adapter.notify();
-            }
-        }
-    };
+
 
 
 

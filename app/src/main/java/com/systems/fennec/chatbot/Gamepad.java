@@ -1,23 +1,69 @@
 package com.systems.fennec.chatbot;
 
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-public class Gamepad extends Fragment
+public class Gamepad
 {
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+    private String title;
+    private String description;
+    private int image;
+
+    // Constructeur
+
+    public Gamepad(String title, String description, int image)
+    {
+        this.title = title;
+        this.description = description;
+        this.image = image;
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    // Getters
+
+    public String getTitle()
+    {
+        return title;
     }
+
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public int getImage()
+    {
+        return image;
+    }
+
+    // Setters
+
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
+    public void setImage(int image)
+    {
+        this.image = image;
+    }
+
+
+    /*
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
+    public void setImage(int image)
+    {
+        this.image = image;
+    }
+    */
 }

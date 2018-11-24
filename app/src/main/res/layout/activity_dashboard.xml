@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/battery" />
+        android:src="@drawable/temperature" />
 
     <ImageView
         android:id="@+id/lightUp"
@@ -103,7 +103,7 @@
         android:src="@drawable/button_circle" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/led_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/radar"
@@ -111,7 +111,7 @@
         android:src="@drawable/spot_light" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/set_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -123,42 +123,42 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/set_led_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView22"
-        android:layout_alignStart="@+id/textView"
+        android:layout_alignBottom="@+id/led_state"
+        android:layout_alignStart="@+id/set_distance"
         android:textColor="@color/colorOrangeTicket"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"
         android:text="LED ON" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/set_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView"
+        android:layout_alignTop="@+id/set_distance"
         android:textColor="@color/colorOrangeTicket"
         android:textStyle="bold"
         android:layout_toStartOf="@+id/temperature"
         android:text="Ambient temperature 7 °C" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/set_charge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/set_led_state"
+        android:layout_alignBottom="@+id/set_led_state"
         android:layout_toStartOf="@+id/battery"
         android:text="Level battery 81 %"
         android:textColor="@color/colorOrangeTicket"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/set_motor_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/set_charge"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorOrangeTicket"
         android:textStyle="bold"
@@ -179,6 +179,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/lightUp"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-16dp"
         android:layout_toEndOf="@+id/btnConnectBluetooth"
         android:text="Motor right stop"
         android:textColor="@color/colorOrangeTicket"

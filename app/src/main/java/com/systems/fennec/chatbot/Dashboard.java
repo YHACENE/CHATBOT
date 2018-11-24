@@ -1,6 +1,7 @@
 package com.systems.fennec.chatbot;
 
 import android.content.pm.ActivityInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,9 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.Socket;
+
 public class Dashboard extends Fragment
 {
-    ImageView btnBluetooth;
+    ImageView btnWiFi;
 
     ImageView btnForward;
     ImageView btnBackward;
@@ -36,14 +39,36 @@ public class Dashboard extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(R.layout.activity_dashboard, null);
-        btnForward = rootView.findViewById(R.id.directionUp);
-        btnForward.setOnClickListener(new View.OnClickListener() {
+
+        btnWiFi = (ImageView) rootView.findViewById(R.id.btnConnectBluetooth);
+
+        btnForward = (ImageView) rootView.findViewById(R.id.directionUp);
+        btnBackward = (ImageView) rootView.findViewById(R.id.directionDown);
+        btnLeft = (ImageView) rootView.findViewById(R.id.directionLeft);
+        btnRight = (ImageView) rootView.findViewById(R.id.directionRight);
+
+        btnLedControl = (ImageView) rootView.findViewById(R.id.lightUp);
+        btnGetTemperature = (ImageView) rootView.findViewById(R.id.temperature);
+        btnLevelBattery = (ImageView) rootView.findViewById(R.id.getCharge);
+        btnGetDistance = (ImageView) rootView.findViewById(R.id.getDistance);
+
+        stateLeds = (TextView) rootView.findViewById(R.id.set_led_state);
+        stateLeftMotor = (TextView) rootView.findViewById(R.id.stateMotorLeft);
+        stateRightMotor = (TextView) rootView.findViewById(R.id.stateMotorRight);
+
+
+
+        btnWiFi.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
-                Toast.makeText(getContext(), "Avancer", Toast.LENGTH_LONG).show();
+                MyCustomDialog dialog = new MyCustomDialog();
+                dialog.show(getFragmentManager(), "MyCustomDialog");
             }
         });
+
+
         return rootView;
     }
 
@@ -54,7 +79,15 @@ public class Dashboard extends Fragment
     {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    }
 
-        Toast.makeText(getContext(), "Dashboard", Toast.LENGTH_LONG).show();
+    public class Socket_AsyncTask extends AsyncTask<Void, Void, Void>
+    {
+        Socket socket;
+        @Override
+        protected Void doInBackground(Void... voids)
+        {
+            return null;
+        }
     }
 }
