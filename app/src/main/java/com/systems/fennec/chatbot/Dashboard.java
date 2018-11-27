@@ -1,7 +1,7 @@
 package com.systems.fennec.chatbot;
 
 import android.content.pm.ActivityInfo;
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.net.Socket;
 
 public class Dashboard extends Fragment
 {
@@ -33,7 +32,7 @@ public class Dashboard extends Fragment
     TextView stateRightMotor;
     TextView stateLeftMotor;
 
-    char command;
+    String command = "0";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -68,11 +67,19 @@ public class Dashboard extends Fragment
             }
         });
 
+        btnForward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                command = "A";
+                MessageSender messageSender = new MessageSender();
+                messageSender.execute(command);
+                Toast.makeText(getActivity(), "Forward", Toast.LENGTH_LONG).show();
+            }
+        });
 
         return rootView;
     }
-
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
@@ -81,13 +88,4 @@ public class Dashboard extends Fragment
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
-    public class Socket_AsyncTask extends AsyncTask<Void, Void, Void>
-    {
-        Socket socket;
-        @Override
-        protected Void doInBackground(Void... voids)
-        {
-            return null;
-        }
-    }
 }

@@ -51,4 +51,9 @@ public class MyCustomDialog extends DialogFragment
         });
         return rootView;
     }
+
+    public String getIPandPort()
+    {
+        return mInput.getText().toString();
+    }
 }

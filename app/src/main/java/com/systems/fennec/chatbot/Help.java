@@ -1,6 +1,7 @@
 package com.systems.fennec.chatbot;
 
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -45,6 +46,13 @@ public class Help extends Fragment
         listGamepads = loadGamepads();
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+    {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
     public static List<Gamepad> loadGamepads()
     {
         List<Gamepad> listGamepads = new ArrayList<>();
@@ -58,7 +66,7 @@ public class Help extends Fragment
         listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_circle));
         listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_x));
         listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_carree));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.temperature));
+        listGamepads.add(new Gamepad("Juge de température", "Wifi communication", R.drawable.temperature));
         listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.battery));
         listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.radar));
         listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.spot_light));
