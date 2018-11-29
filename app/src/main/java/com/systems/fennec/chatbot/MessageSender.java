@@ -2,7 +2,7 @@ package com.systems.fennec.chatbot;
 
 import android.os.AsyncTask;
 
-import java.io.DataOutputStream;
+//import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -10,7 +10,7 @@ import java.net.Socket;
 public class MessageSender extends AsyncTask<String, Void, Void>
 {
     Socket socket;
-    DataOutputStream dataOutputStream;
+    //DataOutputStream dataOutputStream;
     PrintWriter writer;
 
     @Override

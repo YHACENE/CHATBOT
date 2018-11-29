@@ -32,7 +32,6 @@ public class Dashboard extends Fragment
     TextView stateRightMotor;
     TextView stateLeftMotor;
 
-    String command = "0";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -71,14 +70,73 @@ public class Dashboard extends Fragment
             @Override
             public void onClick(View v)
             {
-                command = "A";
-                MessageSender messageSender = new MessageSender();
-                messageSender.execute(command);
+                sendCommand("Avancer");
                 Toast.makeText(getActivity(), "Forward", Toast.LENGTH_LONG).show();
             }
         });
 
+        btnBackward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                sendCommand("Reculer");
+
+            }
+        });
+
+        btnRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                sendCommand("Right");
+            }
+        });
+
+        btnLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendCommand("Left");
+            }
+        });
+
+        btnGetDistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                sendCommand("getDistance");
+            }
+        });
+
+        btnLevelBattery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Toast.makeText(getActivity(), "Not implemented yet", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnLedControl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Toast.makeText(getActivity(), "Not implemented yet", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnGetTemperature.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Toast.makeText(getActivity(), "Not implemented yet", Toast.LENGTH_LONG).show();
+            }
+        });
         return rootView;
+    }
+
+    private void sendCommand(String command)
+    {
+        MessageSender messageSender = new MessageSender();
+        messageSender.execute(command);
     }
 
     @Override
