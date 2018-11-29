@@ -22,7 +22,6 @@ public class Help extends Fragment
 
     public Help()
     {
-
     }
 
     @Nullable
