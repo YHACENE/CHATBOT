@@ -61,8 +61,12 @@ public class Dashboard extends Fragment
             @Override
             public void onClick(View v)
             {
+                /*
                 MyCustomDialog dialog = new MyCustomDialog();
                 dialog.show(getFragmentManager(), "MyCustomDialog");
+                */
+                sendCommand("stop");
+                Toast.makeText(getActivity(), "STOP", Toast.LENGTH_SHORT).show();L
             }
         });
 
@@ -70,7 +74,7 @@ public class Dashboard extends Fragment
             @Override
             public void onClick(View v)
             {
-                sendCommand("Avancer");
+                sendCommand("forward");
                 Toast.makeText(getActivity(), "Forward", Toast.LENGTH_LONG).show();
             }
         });
@@ -79,7 +83,7 @@ public class Dashboard extends Fragment
             @Override
             public void onClick(View view)
             {
-                sendCommand("Reculer");
+                sendCommand("backward");
 
             }
         });
@@ -88,14 +92,14 @@ public class Dashboard extends Fragment
             @Override
             public void onClick(View view)
             {
-                sendCommand("Right");
+                sendCommand("right");
             }
         });
 
         btnLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendCommand("Left");
+                sendCommand("left");
             }
         });
 
@@ -103,7 +107,7 @@ public class Dashboard extends Fragment
             @Override
             public void onClick(View view)
             {
-                sendCommand("getDistance");
+                Toast.makeText(getActivity(), "Not implemented yet", Toast.LENGTH_LONG).show();
             }
         });
 

@@ -18,6 +18,7 @@ public class MyCustomDialog extends DialogFragment
     private EditText mInput;
     private TextView mActionCancel;
     private TextView mActionOK;
+    private String portAndAdressIP;
 
     @Nullable
     @Override
@@ -46,6 +47,10 @@ public class MyCustomDialog extends DialogFragment
                 if (!input.equals(""))
                 {
                     Toast.makeText(getActivity(), "Put the IP adress", Toast.LENGTH_LONG).show();
+                }else
+                {
+                    portAndAdressIP = mInput.getText().toString();
+                    getDialog().dismiss();
                 }
             }
         });
@@ -54,6 +59,8 @@ public class MyCustomDialog extends DialogFragment
 
     public String getIPandPort()
     {
-        return mInput.getText().toString();
+        return portAndAdressIP;
     }
+
+
 }

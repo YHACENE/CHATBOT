@@ -8,13 +8,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/wifi"/>
+
 
         <TextView
             android:id="@+id/txt_view_dialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:text="@string/dialogName" />
 
         <EditText
@@ -22,9 +31,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="textUri"
+            android:textAlignment="center"
             android:textColor="@color/colorWhite"
             android:textSize="16dp" />
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -56,7 +56,7 @@ public class Help extends Fragment
     {
         List<Gamepad> listGamepads = new ArrayList<>();
 
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.bluetooth));
+        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.wifi));
         listGamepads.add(new Gamepad("Avancer", "Ce button permet d'avancer", R.drawable.direction_up));
         listGamepads.add(new Gamepad("A droite", "Ce button permet de tourner à droite", R.drawable.direction_right));
         listGamepads.add(new Gamepad("A Gauche", "Ce button permet de tourner à gauche", R.drawable.direction_left));

@@ -6,54 +6,76 @@
     android:background="@color/colorDashboardBackground"
     android:orientation="vertical">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/onOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="55dp"
+        android:text="Wifi On" />
+
+    <Button
+        android:id="@+id/discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/onOff"
+        android:layout_alignBottom="@+id/onOff"
+        android:layout_centerHorizontal="true"
+        android:text="discover" />
+
+    <ListView
+        android:id="@+id/peerListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/onOff"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/holo_orange_light" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/txtScan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:text="@string/scan"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="22dp" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/readMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/peerListView"
+        android:layout_marginTop="31dp"
+        android:text="Message"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="bottom">
-            <ListView
-                android:id="@+id/wifi_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+    <EditText
+        android:id="@+id/writeMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_toStartOf="@+id/sendButton" />
 
-            </ListView>
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Send" />
 
-            <Button
-                android:id="@+id/btn_scan"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="22dp"
-                android:text="@string/scan_btn"
-                android:background="@color/colorOrangeTicket"
-                android:layout_gravity="bottom"/>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="Connection Status"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
 </RelativeLayout>
