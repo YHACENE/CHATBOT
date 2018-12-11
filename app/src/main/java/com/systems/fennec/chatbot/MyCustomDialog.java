@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MyCustomDialog extends DialogFragment
+public class  MyCustomDialog extends DialogFragment
 {
     private static final String TAG = "MyCustomDialog";
 

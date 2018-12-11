@@ -1,6 +1,7 @@
 package com.systems.fennec.chatbot;
 
 import android.content.pm.ActivityInfo;
+import android.net.rtp.RtpStream;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,7 +24,7 @@ public class VideoCapture extends Fragment
     {
         View rootView = inflater.inflate(R.layout.fragment_video_capture, container, false);
 
-        btnGet = (Button) rootView.findViewById(R.id.btn_capt_data);
+       // btnGet = (Button) rootView.findViewById(R.id.btn_capt_data);
         dataView = (TextView) rootView.findViewById(R.id.txt_view_data);
 
         btnGet.setOnClickListener(new View.OnClickListener() {

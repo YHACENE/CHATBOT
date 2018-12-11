@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class Dashboard extends Fragment
 {
-    ImageView btnWiFi;
+    ImageView btnPower;
 
     ImageView btnForward;
     ImageView btnBackward;
@@ -38,7 +38,7 @@ public class Dashboard extends Fragment
     {
         View rootView = inflater.inflate(R.layout.activity_dashboard, null);
 
-        btnWiFi = (ImageView) rootView.findViewById(R.id.btnConnectBluetooth);
+        btnPower = (ImageView) rootView.findViewById(R.id.btnPowerOff);
 
         btnForward = (ImageView) rootView.findViewById(R.id.directionUp);
         btnBackward = (ImageView) rootView.findViewById(R.id.directionDown);
@@ -56,7 +56,7 @@ public class Dashboard extends Fragment
 
 
 
-        btnWiFi.setOnClickListener(new View.OnClickListener()
+        btnPower.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -66,7 +66,7 @@ public class Dashboard extends Fragment
                 dialog.show(getFragmentManager(), "MyCustomDialog");
                 */
                 sendCommand("stop");
-                Toast.makeText(getActivity(), "STOP", Toast.LENGTH_SHORT).show();L
+                Toast.makeText(getActivity(), "STOP", Toast.LENGTH_SHORT).show();
             }
         });
 

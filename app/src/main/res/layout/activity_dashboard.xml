@@ -14,12 +14,12 @@
         android:contentDescription="TODO" />
 
     <ImageView
-        android:id="@+id/btnConnectBluetooth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnPowerOff"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignTop="@+id/getTemperature"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/bluetooth"
+        android:src="@drawable/power"
         android:contentDescription="TODO" />
 
     <ImageView
@@ -144,7 +144,7 @@
         android:textColor="@color/colorOrangeTicket"
         android:textStyle="bold"
         android:layout_toStartOf="@+id/temperature"
-        android:text="Ambient temperature 7 °C" />
+        android:text="Ambient temperature 17 °C" />
 
     <TextView
         android:id="@+id/set_charge"
@@ -184,7 +184,7 @@
         android:layout_alignTop="@+id/lightUp"
         android:layout_marginStart="-1dp"
         android:layout_marginTop="-16dp"
-        android:layout_toEndOf="@+id/btnConnectBluetooth"
+        android:layout_toEndOf="@+id/btnPowerOff"
         android:text="Motor right stop"
         android:textColor="@color/colorOrangeTicket"
         android:textStyle="bold" />

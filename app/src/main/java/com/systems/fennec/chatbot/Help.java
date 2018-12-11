@@ -56,19 +56,19 @@ public class Help extends Fragment
     {
         List<Gamepad> listGamepads = new ArrayList<>();
 
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.wifi));
+        listGamepads.add(new Gamepad("Stop", "Allumer/Eteindre le système", R.drawable.wifi));
         listGamepads.add(new Gamepad("Avancer", "Ce button permet d'avancer", R.drawable.direction_up));
         listGamepads.add(new Gamepad("A droite", "Ce button permet de tourner à droite", R.drawable.direction_right));
         listGamepads.add(new Gamepad("A Gauche", "Ce button permet de tourner à gauche", R.drawable.direction_left));
         listGamepads.add(new Gamepad("Reculer", "Ce button permet de reculer", R.drawable.direction_down));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_triangle));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_circle));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_x));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.button_carree));
-        listGamepads.add(new Gamepad("Juge de température", "Wifi communication", R.drawable.temperature));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.battery));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.radar));
-        listGamepads.add(new Gamepad("WiFi", "Wifi communication", R.drawable.spot_light));
+        listGamepads.add(new Gamepad("LED", "Allumer les leds", R.drawable.button_triangle));
+        listGamepads.add(new Gamepad("Température", "Demander la température ambiante de la salle", R.drawable.button_circle));
+        listGamepads.add(new Gamepad("Charge", "Avoir le pourcentage de charge de la batterie", R.drawable.button_x));
+        listGamepads.add(new Gamepad("Distance", "Avoir la distance entre le robot et un obstacle", R.drawable.button_carree));
+        listGamepads.add(new Gamepad("Juge de température", "Afficher la température ambiante de la salle", R.drawable.temperature));
+        listGamepads.add(new Gamepad("Niveau de charge", "Afficher le niveau de charge", R.drawable.battery));
+        listGamepads.add(new Gamepad("Radar", "Afficher la distance entre un obstacle et le robot", R.drawable.radar));
+        listGamepads.add(new Gamepad("Phare", "Afficher l'état des leds allumer/éteint", R.drawable.spot_light));
 
         return listGamepads;
     }

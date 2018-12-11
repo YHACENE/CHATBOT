@@ -1,7 +1,5 @@
 package com.systems.fennec.chatbot;
 
-
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
@@ -13,7 +11,6 @@ import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -28,9 +25,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.systems.fennec.chatbot.WiFiDirectBroadcastReceiver;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
