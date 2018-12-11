@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
     @Override
@@ -29,7 +31,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -62,7 +63,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         switch (id)
         {
             case R.id.action_settings:
-                Toast.makeText(this, "Menu Clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Menu Clicked", LENGTH_LONG).show();
                 return true;
             case R.id.action_exit:
                 this.finish();
